@@ -3,11 +3,12 @@
 import React, { useEffect, useState } from 'react';
 
 export function App() {
-
   // 1) initial state doesn't have any data.
 
   const [temp, setTemp] = useState(null);
   const [coords, setCoords] = useState();
+
+  // NOTE: This is not secure, but is the best option pre-build - https://stackoverflow.com/a/57103663
 
   let key = process.env.REACT_APP_WEATHERBIT_API_KEY;
 
